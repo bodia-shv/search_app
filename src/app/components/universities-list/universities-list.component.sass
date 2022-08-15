@@ -1,0 +1,119 @@
+.container
+  flex-direction: column
+  padding: 20px
+  .search-form
+    width: 100%
+    .spinner
+      margin-bottom: -7px
+
+  .search-hint
+    width: 100%
+
+  .table-container
+    width: 100%
+
+  .search-hint
+    margin-bottom: 0px
+  .table-title
+    padding: 0px 20px
+    font-weight: 400
+  .table-info
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    padding: 20px
+    mat-slide-toggle
+      margin-right: 10px
+    .table-filter
+      margin-right: 10px
+    button
+      margin-right: 10px
+
+
+  mat-table
+    width: 100%
+    overflow: hidden
+
+    mat-row
+      border-bottom: 0px
+      mat-cell
+        word-break: break-all
+    .mat-header-cell
+      cursor: pointer
+    .cdk-drag-placeholder
+      color: transparent
+      position: relative
+      transition: transform 250ms cubic-bezier(0, 0, 0.2, 1)
+
+    .cdk-drag-placeholder::after
+      content: ""
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0px
+      right: 0px
+      border-radius: 4px
+      background: rgba(0,0,0,0.1)
+
+    .cdk-drag-animating
+      transition: transform 250ms cubic-bezier(0, 0, 0.2, 1)
+
+    .mat-column-select
+      flex: 0 0 5%
+    .mat-column-country
+      flex: 0 0 15%
+    .mat-column-name
+      flex: 0 0 30%
+    .mat-column-alpha_two_code
+      flex: 0 0 5%
+    .mat-column-domains
+      flex: 0 0 15%
+    .mat-column-web_pages
+      flex: 0 0 18%
+    .mat-column-expand
+      flex: 0 0 12%
+      border-bottom: none
+      justify-content: center
+
+      button
+        border: none
+        background: none
+        cursor: pointer
+
+    .detail-row
+      border: none
+      min-height: auto
+    .element-detail
+      overflow: hidden
+      display: flex
+
+@media screen and (max-width: 960px)
+  mat-table
+    vertical-align: middle
+    mat-header-row
+      display: none
+    mat-row
+      display: block
+      &.row
+        border-bottom: 5px solid #ddd!important
+        &.expanded-row
+          border-bottom: none!important
+          &+.detail-row
+            border-bottom: 5px solid #ddd!important
+      &.detail-row
+        border-bottom: none!important
+      .mat-column-select
+        justify-content: flex-start
+
+
+    mat-cell
+      padding: 0px 20px
+      border-bottom: 1px solid #ddd
+      display: flex
+      justify-content: space-between
+      &:before
+        content: attr(data-label)
+        float: left
+        text-transform: uppercase
+      &:last-child
+        border-bottom: 0

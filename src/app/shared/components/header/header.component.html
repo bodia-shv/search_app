@@ -1,0 +1,14 @@
+<header class="mat-app-background">
+  <div class="container">
+    <a [routerLink]="['/']" class="logo">
+      <img *ngIf="!isDarkMode; else darkLogo" src="./assets/img/logo.png" alt="Zultys">
+      <ng-template #darkLogo>
+        <img src="./assets/img/logo_dark.png" alt="Zultys">
+      </ng-template>
+    </a>
+    <mat-slide-toggle
+      [checked]="isDarkMode"
+      (change)="onDarkModeSwitched($event)"
+    >{{isDarkMode ? 'Dark Mode On' : 'Light Mode On'}}</mat-slide-toggle>
+  </div>
+</header>

@@ -1,0 +1,12 @@
+<div class="mat-app-background mat-typography root-wrapper">
+  <app-header (darkModeSwitched)="switchMode($event)"
+              [isDarkMode]="isDarkMode"
+  ></app-header>
+  <main>
+    <!--<mat-card>
+      <router-outlet></router-outlet>
+    </mat-card>-->
+    <router-outlet></router-outlet>
+  </main>
+  <app-footer></app-footer>
+</div>

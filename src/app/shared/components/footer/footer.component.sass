@@ -1,0 +1,32 @@
+footer
+  width: 100%
+  background: #000
+  color: #ffffff
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 20px
+  box-sizing: border-box
+  font-size: 14px
+  position: absolute
+  bottom: 0px
+  left: 0px
+  right: 0px
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    .links
+      a
+        color: #ffffff
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+
+@media screen and (max-width: 960px)
+  footer
+    .container
+      flex-direction: column
+      .links
+        margin-top: 20px
